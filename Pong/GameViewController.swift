@@ -10,7 +10,21 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
+
 class GameViewController: UIViewController {
+    
+    private var _mode: String!
+    
+    var mode : String { // will be used in previous view controller to pass in the game mode to adjust setting here
+        get {
+            return _mode
+        }
+        set {
+            _mode = newValue
+            gameType = newValue
+        }
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,15 +38,19 @@ class GameViewController: UIViewController {
                 scene.size = view.bounds.size // apply bounds of device to project
                 
                 // Present the scene
+                
                 view.presentScene(scene)
+                
+                
             }
-            
             view.ignoresSiblingOrder = true
             
             view.showsFPS = true
             view.showsNodeCount = true
         }
     }
+    
+    
 
     override var shouldAutorotate: Bool {
         return true

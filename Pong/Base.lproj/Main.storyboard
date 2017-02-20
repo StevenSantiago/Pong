@@ -1,14 +1,113 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tkz-46-FGT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Game ModeVC-->
+        <scene sceneID="1hj-ws-R4g">
+            <objects>
+                <viewController id="hS5-zT-A2v" customClass="gameModeVC" customModule="Pong" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pcZ-ga-o4B"/>
+                        <viewControllerLayoutGuide type="bottom" id="BRe-CK-f5Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DEz-9b-3Xm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="P7R-nh-gbQ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="csn-fb-h5g">
+                                        <rect key="frame" x="156" y="0.0" width="63" height="323.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PONG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCK-83-v6b">
+                                                <rect key="frame" x="0.0" y="0.0" width="63" height="20"/>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFx-JD-EBr">
+                                                <rect key="frame" x="0.0" y="20" width="63" height="303.5"/>
+                                                <state key="normal" title="2 Players"/>
+                                                <connections>
+                                                    <action selector="gameModeWith_sender:" destination="hS5-zT-A2v" eventType="touchUpInside" id="bu0-bc-JSQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="66S-Pj-qri">
+                                        <rect key="frame" x="160" y="323.5" width="55" height="323.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJX-qm-xgr">
+                                                <rect key="frame" x="0.0" y="0.0" width="55" height="108"/>
+                                                <state key="normal" title="Easy"/>
+                                                <connections>
+                                                    <action selector="gameModeWith_sender:" destination="hS5-zT-A2v" eventType="touchUpInside" id="1Pw-1Y-1kr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlH-xy-UQj">
+                                                <rect key="frame" x="0.0" y="108" width="55" height="107.5"/>
+                                                <state key="normal" title="Medium"/>
+                                                <connections>
+                                                    <action selector="gameModeWith_sender:" destination="hS5-zT-A2v" eventType="touchUpInside" id="9lq-hF-v4H"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tk-IX-62g">
+                                                <rect key="frame" x="0.0" y="215.5" width="55" height="108"/>
+                                                <state key="normal" title="Hard"/>
+                                                <connections>
+                                                    <action selector="gameModeWith_sender:" destination="hS5-zT-A2v" eventType="touchUpInside" id="Q0l-r3-kCl"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="P7R-nh-gbQ" secondAttribute="trailing" id="3QJ-SB-dgM"/>
+                            <constraint firstItem="BRe-CK-f5Q" firstAttribute="top" secondItem="P7R-nh-gbQ" secondAttribute="bottom" id="503-jG-KoR"/>
+                            <constraint firstItem="P7R-nh-gbQ" firstAttribute="leading" secondItem="DEz-9b-3Xm" secondAttribute="leading" id="7tc-nd-SSB"/>
+                            <constraint firstItem="P7R-nh-gbQ" firstAttribute="top" secondItem="pcZ-ga-o4B" secondAttribute="bottom" id="x8S-hm-0CK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FxS-6W-11J"/>
+                    <connections>
+                        <segue destination="BV1-FR-VrT" kind="show" identifier="GameVC" id="Vu5-P6-o9r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V2S-2f-3nr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1647.2" y="-537.48125937031489"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MBp-QB-Fs6">
+            <objects>
+                <navigationController hidesBarsOnTap="YES" id="Tkz-46-FGT" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iJk-eB-WPi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hS5-zT-A2v" kind="relationship" relationship="rootViewController" id="2DI-0i-Zbp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tmU-hR-Au8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2465" y="-537"/>
+        </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="Pong" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
@@ -21,6 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-810" y="-537"/>
         </scene>
     </scenes>
 </document>
